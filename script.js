@@ -40,9 +40,25 @@ function displayTasks() {
       "align-items-center"
     );
 
-    li.innerHTML = `${task} <button class='btn btn-dark btn-sm' onclick = 'removeTask(${index}'> √ </button>`;
+    li.innerHTML = `${task} <button class='btn btn-success btn-sm' onclick = 'removeTask(${index})'> √ </button>`;
 
     //Append  the new task to the task list
     taskList.appendChild(li);
   });
 }
+
+// Function to remove a task from the list when "√" button is clicked
+function removeTask(index) {
+  //Remove the task at the given index from the array
+  tasks.splice(index, 1);
+  //call the function to update the task list display
+  displayTasks();
+}
+
+//Event listener for "Clear All Tasks" button
+document.getElementById("clearTaskBtn").addEventListener("click", function () {
+  //Empty the task array to remove all tasks
+  tasks = [];
+  //Call the function to update the task list display
+  displayTasks();
+});
