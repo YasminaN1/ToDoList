@@ -97,3 +97,11 @@ body {
     text-shadow: none;
   }
 }
+#taskCounter {
+  margin-top: 150px;
+  position: absolute;
+  font-size: 50px;
+  font-family: "legitima", serif;
+  color: rgb(201, 255, 237) !important; 
+}
+

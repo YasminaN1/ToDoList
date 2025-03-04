@@ -39,6 +39,8 @@ function addTask() {
 function displayTasks() {
   // Select the unordered list (taskList) in the HTML
   let taskList = document.getElementById("taskList");
+  let taskCounter = document.getElementById("taskCounter");
+  taskCounter.textContent = `Total Tasks: ${tasks.length}`;
 
   // Clear the existing task list before updating it
   taskList.innerHTML = "";
